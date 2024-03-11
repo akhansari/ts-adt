@@ -41,7 +41,7 @@ type Shirt = {
 
 ## Pattern Matching
 
-It's possible by adding a "kind" field into the product type.
+It's possible by adding a "kind" field to the product type.
 
 ```typescript
 type SleeveLength = "Short" | "Long"
@@ -77,7 +77,7 @@ const describeClothing = (clothing: Clothing) => {
 }
 ```
 
-You can go further by adding sections to kinds to combine Clothing and Shoes.
+You can go further by adding sections to kinds in order to combine Clothing and Shoes.
 
 - `kind: "Clothing/Shirt"`
 - `kind: "Clothing/Jean"`
