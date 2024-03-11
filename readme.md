@@ -1,5 +1,5 @@
 
-# Algebraic data types
+# Algebraic Data Types & Typescript
 
 Algebraic data types are a way of representing data by **combining** simple types using algebraic operations.
 There are two main kinds of algebraic types: product types and sum types. Discriminated unions are a specific implementation of sum types.
