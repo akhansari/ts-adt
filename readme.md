@@ -1,7 +1,7 @@
 
-# Algebraic types
+# Algebraic data types
 
-Algebraic types are a way of representing data by **combining** simple types using algebraic operations.
+Algebraic data types are a way of representing data by **combining** simple types using algebraic operations.
 There are two main kinds of algebraic types: product types and sum types. Discriminated unions are a specific implementation of sum types.
 
 ## Product types (AND types)
