@@ -8,7 +8,7 @@ export type Material = {
 export type FabricMaterial = Material[]
 
 export type Shirt = {
-	kind: "Shirt"
+	kind: "Clothing/Shirt"
 	size: "S" | "M" | "L" | "XL" | "XXL"
 	fabricMaterial: FabricMaterial
 	collar: string
@@ -17,7 +17,7 @@ export type Shirt = {
 }
 
 export type Jean = {
-	kind: "Jean"
+	kind: "Clothing/Jean"
 	hipSize: number
 	legSize: number
 	fabricMaterial: FabricMaterial
@@ -27,9 +27,15 @@ export type Jean = {
 
 export type Clothing = Shirt | Jean
 
-export type Shoes = {
-	kind: "Shoes"
+export type Sneakers = {
+	kind: "Shoes/Sneakers"
 }
+
+export type Boots = {
+	kind: "Shoes/Boots"
+}
+
+export type Shoes = Sneakers | Boots
 
 export type Product = {
 	id: number
@@ -39,12 +45,14 @@ export type Product = {
 
 const describeProduct = (product: Product) => {
 	switch (product.item.kind) {
-		case "Shirt":
+		case "Clothing/Shirt":
 			return "This is a shirt!"
-		case "Jean":
+		case "Clothing/Jean":
 			return "This is a jean!"
-		case "Shoes":
-			return "This is shoes!"
+		case "Shoes/Sneakers":
+			return "This is sneakers!"
+		case "Shoes/Boots":
+			return "This is boots!"
 	}
 }
 
@@ -52,7 +60,7 @@ const product: Product = {
 	id: 123,
 	price: 99,
 	item: {
-		kind: "Shirt",
+		kind: "Clothing/Shirt",
 		size: "L",
 		fabricMaterial: [{ name: "Cotton", percentage: 100 }],
 		collar: "Kent",
