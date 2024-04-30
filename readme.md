@@ -94,14 +94,17 @@ type Product = {
 
 ## OpenAPI
 
-In OpenAPI specification, sum types are represented by `anyOf`.
+In OpenAPI specification, sum types are represented by `oneOf`.
 
-```json
-"Clothing": {
-    "anyOf": [
-        { "$ref": "#/components/schemas/Shirt", "title": "Clothing" },
-        { "$ref": "#/components/schemas/Jean", "title": "Clothing" }
-    ],
-    "title": "Clothing"
+```yaml
+Clothing:
+  oneOf:
+    - $ref: "#/components/schemas/Shirt"
+    - $ref: "#/components/schemas/Jean"
+  discriminator:
+    propertyName: kind
+    mapping:
+      Shirt: "#/components/schemas/Shirt"
+      Jean: "#/components/schemas/Jean"
 },
 ```
