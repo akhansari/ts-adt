@@ -106,5 +106,4 @@ Clothing:
     mapping:
       Shirt: "#/components/schemas/Shirt"
       Jean: "#/components/schemas/Jean"
-},
 ```
